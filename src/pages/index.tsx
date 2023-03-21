@@ -1,7 +1,8 @@
 
 
 import { useState , useEffect } from "react";
-import dynamic from 'next/dynamic'
+import axios from "axios";
+import dynamic from 'next/dynamic';
 import BannerCard from "@components/common/banner-card";
 import Container from "@components/ui/container";
 import CategoryBlock from "@containers/category-block";
@@ -27,12 +28,16 @@ const Banner = dynamic(
   () => import("@components/banner/banner")
 );
 
-export {getServerSideProps} from '@framework/ssr/get-product'
-export default function Home({data}) {
+// export {getServerSideProps} from '@framework/ssr/get-product'
+
+export default function Home() {
 const [swiperKey, setSwiperKey] = useState(0);
+const [data, setData] = useState(0);
 
 useEffect(() => {
   setSwiperKey(1);
+  axios.get('https://fascolor.onrender.com/product')
+  .then((res:any) => setData(res.data))
 }, []);
   return (
     <>
