@@ -27,7 +27,7 @@ const Banner = dynamic(
   () => import("@components/banner/banner")
 );
 
-export {getServerSideProps} from '@framework/ssr/get-product'
+// export {getServerSideProps} from '@framework/ssr/get-product'
 export default function Home({data}) {
 const [swiperKey, setSwiperKey] = useState(0);
 
@@ -36,23 +36,7 @@ useEffect(() => {
 }, []);
   return (
     <>
-          <BannerSliderBlock data={promotionBanner} />
-
-      <BannerBlock data={masonryBanner} /> 
-  
-      <Container>
-        {/* <CategoryBlock sectionHeading="text-shop-by-category" variant="rounded" />
-        <TopSell/> */}
-        <BannerCard
-          data={banner[0]}
-          href={`${ROUTES.COLLECTIONS}/${banner[0].slug}`}
-          className="mb-12 lg:mb-14 xl:mb-16 pb-0.5 lg:pb-1 xl:pb-0"
-        />
-        <NewProduct data={data}/>
-        
- <ExclusiveBlock/>
-      </Container>
-      <Divider className="mb-0" />
+          <h1>Hello</h1>
     </>
   );
 }
