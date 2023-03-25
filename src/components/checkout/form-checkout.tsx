@@ -180,7 +180,7 @@ const FormCheckout:React.FC = ({data}:any) => {
           </div>
        <div className=" text-center text-[14px]">
             {/* <div className="h-[40px] w-[340px] leading-[40px] text-[#fff] rounded-lg bg-[#003468] m-auto cursor-pointer">Đặt hàng</div> */}
-            <input className="-[40px] w-[340px] leading-[40px] text-[#fff] rounded-lg bg-[#003468] m-auto cursor-pointer" type="submit" />
+            <input value={"Thanh Toán"} className="-[40px] w-[340px] leading-[40px] text-[#fff] rounded-lg bg-[#003468] m-auto cursor-pointer" type="submit" />
             <p className="text-[#002D5C]">(Bạn có thể chọn hình thức thanh toán sau khi đặt hàng)</p>
        </div>
         </form>

@@ -30,7 +30,7 @@ const DefaultSeo = () => {
         },
       ]}
       // title={settings?.seo?.metaTitle || settings?.siteTitle || 'E-Commerce'}
-      title="Trang Sức Cao Cấp PNJ | Cty Cổ Phần Vàng Bạc Đá Quý Phú Nhuận"
+      title="FAS COLOR || Dẫn Đầu Xu Hướng Trẻ"
 
       defaultTitle="Trang Sức Cao Cấp PNJ | Cty Cổ Phần Vàng Bạc Đá Quý Phú Nhuận"
       description={settings?.seo?.metaDescription || settings?.siteSubtitle}

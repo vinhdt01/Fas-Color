@@ -191,9 +191,6 @@ const CustomApp: any = ({ Component, pageProps }: AppPropsWithLayout) => {
   const router = useRouter();
   const dir = getDirection(router.locale);
 
-  // useEffect(() => {
-  //   document.documentElement.dir = dir;
-  // }, [dir]);
 
   return (
     
