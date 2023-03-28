@@ -40,4 +40,6 @@ module.exports = withPWA({
   eslint: {
     ignoreDuringBuilds: true,
   },
+  runtime: 'nodejs',
+
 });
