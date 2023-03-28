@@ -6,7 +6,7 @@ export async function getServerSideProps(context) {
 //     ;
 //  const res = await axios.get(`${base_url}` + '/get-product/' +     `${slug}`);
 //   const data = res.data;
- const res = await axios.get(`https://fascolor.onrender.com/get-product/6416c2ca36ba978f0749fa87`);
+ const res = await axios.get(`https://fascolor.onrender.com/get-product/${context.params.slug}`);
   const data = res.data;
 
   return {
