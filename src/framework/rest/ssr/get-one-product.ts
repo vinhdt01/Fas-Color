@@ -6,10 +6,12 @@ export async function getServerSideProps(context) {
 //     ;
 //  const res = await axios.get(`${base_url}` + '/get-product/' +     `${slug}`);
 //   const data = res.data;
+ const res = await axios.get(`https://jsonplaceholder.typicode.com/todos/1`);
+  const data = res.data;
 
   return {
     props: {
-      data:'dasdsa',
+      data:data,
     },
   };
 }
