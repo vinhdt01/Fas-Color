@@ -71,10 +71,7 @@ interface Props {
 export const ProductAttributes: React.FC<Props> = ({
 	className = "mb-4",
 	title='colors',
-	// attributes,
-	active,
-	// onClick,
-	testSetVariants
+
 }) => {
 	const attributes = [{
 		id:1,
@@ -118,10 +115,7 @@ export const ProductAttributes: React.FC<Props> = ({
 							}
 						)}
 						// onClick={() => onClick({ [title]: value })}
-						onClick={() => {
-							testSetVariants(price , quantity , size , id)
-							setVariant(id)
-						}}
+					
 					>
 						{title === "color" || title === 'colors' ? (
 							<span

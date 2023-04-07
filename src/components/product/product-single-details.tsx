@@ -42,9 +42,7 @@ const ProductSingleDetails: React.FC = ({ data }: any) => {
   let selectedVariation = {
     sale_price:5000
   }
-  const [testselectedVariation , settestselectedVariation] = useState({
-
-  })
+ 
 
       const { price } = usePrice({
           amount: Number(data?.price!),
@@ -52,7 +50,6 @@ const ProductSingleDetails: React.FC = ({ data }: any) => {
       });
   function addToCart() {
 
-    if(testselectedVariation.size !== undefined) {
       setAddToCartLoader(true);
       addItemToCart({
         id:data._id,
@@ -66,24 +63,14 @@ const ProductSingleDetails: React.FC = ({ data }: any) => {
       setTimeout(() => {
         setAddToCartLoader(false);
       }, 600);
-    }
-    else {
-      setShowAlertSize(true)
-    }
+  
   
   }
  
 
   // fake variants
   const variations = {a:'something'}
-  const  testSetVariants = (a , b , c) => {
-    settestselectedVariation({
-      sale_price:a,
-      quantity:b,
-      size:c
-    })
 
-  } 
   const handleShow = () => {
     setShow(!show)
   }
@@ -177,20 +164,7 @@ const ProductSingleDetails: React.FC = ({ data }: any) => {
             </div>
           </div>
          
-          {!isEmpty(variations) && (
-            <div className="pt-3 border-b border-gray-300 flex">
-              {Object.keys(variations).map((variation) => {
-                return (
-                  <ProductAttributes
-                    key={variation}
-                    title={variation}
-                    attributes={variations[variation]}
-                    testSetVariants={testSetVariants}
-                  />
-                );
-              })}
-            </div>
-          )}
+       
      <ProductPromotion/>
           <div className="flex items-center  space-x-4 ">
                  <Counter
@@ -201,13 +175,7 @@ const ProductSingleDetails: React.FC = ({ data }: any) => {
                       setQuantity((prev) => (prev !== 1 ? prev - 1 : 1))
                     }
                     disableDecrement={quantity === 1}
-                    // disableIncrement={
-                    //   Number(selectedVariation.quantity) === quantity
-                    // }
-  
-                     disableIncrement={
-                      Number(testselectedVariation.quantity) === quantity
-                    }
+                
                   />
             <Button
               onClick={addToCart}
@@ -217,11 +185,10 @@ const ProductSingleDetails: React.FC = ({ data }: any) => {
               `
             }
              
-              disabled={testselectedVariation.quantity == 0 }
               loading={addToCartLoader}
             >
               <span className="py-2 3xl:px-8 ">
-                {testselectedVariation.quantity == 0 ?  'Hết hàng' : 'Thêm vào giỏ hàng' }
+                'Thêm vào giỏ hàng' 
               </span>
             </Button>
          

@@ -50,14 +50,7 @@ function ImageSlider({handleShowGalaryFromSlide , id , data}) {
   return (
     <div className="main ">
        {show && <GalleryProduct data={data} handleShow={handleShow} id={id}/>}
-      {/* <div className='flex_row'>
-        {imgs.map((data,i)=>
-        <div className="thumbnail" key={i} >
-          <img className={wordData.id==i?"clicked":""} src={data.value} onClick={()=>handleClick(i)} height="70" width="100" />
-        </div>
-        )}
-        "w-[76px] h-[76px] mb-2 border-2"
-      </div> */}
+    
 
      <div className="relative">
     {imgs.length > 5 && (
@@ -85,7 +78,7 @@ function ImageSlider({handleShowGalaryFromSlide , id , data}) {
  </div>
      </div>
 <div className="relative">
-          <img onClick={handleShowGalaryFromSlide} className="bg-[#f7f7f7]" src={wordData.value} height="300" width="500" /> 
+          <img onClick={handleShowGalaryFromSlide} className="bg-[#f7f7f7] w-[473px] h-[473px]" src={wordData.value} height="300" width="500" /> 
           <img className="w-9 h-9 absolute top-2 right-2" src="https://cdn.pnj.io/images/image-update/tag-product/new-icon-3-w29.svg"/>
              <div className="flex justify-center mt-2 cursor-pointer" onClick={handleShow}>
                 <img src="https://cdn.pnj.io/images/p_detail/anh.svg"/>

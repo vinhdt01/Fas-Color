@@ -4,6 +4,8 @@ import { useState , useEffect} from 'react'
 import cn from 'classnames'
 import { useCart } from '@store/quick-cart/cart.context';
 import orderPost from '@framework/checkout/http.orders'
+import { useRouter } from "next/router";
+
 type FormValues = {
   gender:string;
   name: string;
@@ -18,8 +20,7 @@ type FormValues = {
   address:string;
   shop:string;
   note:string;
-  bill:boolean;
-  promotion:boolean
+
 
 };
 
@@ -31,16 +32,19 @@ const FormCheckout:React.FC = ({data}:any) => {
   const [specialdistrict , setSpecialdistrict] = useState()
 
   const [ward , setWard] = useState()
+
   const { items } = useCart();
 // console.log(items)
   const { register, handleSubmit } = useForm<FormValues>();
-  const onSubmit = data => 
+  const route = useRouter() 
+
+  const onSubmit =  async (data) => 
   {
     data = {
       ...data , items:JSON.stringify(items)
     }
-    orderPost(data)
-    console.log(data)
+   let orderid=await  orderPost(data)
+   return route.push(`/payment?orderid=${orderid}`)
   };
 
   useEffect(() => {
@@ -172,12 +176,7 @@ const FormCheckout:React.FC = ({data}:any) => {
             </div>
 
           </div>
-          <div className="mb-3 ">
-              <div><input {...register("bill") } type="checkbox" className="mr-2"/>
-            <label className="leading-0">Xuất hóa đơn công ty (không áp dụng phiếu quà tặng điện tử)</label></div>
-            <div><input {...register("promotion") } type="checkbox"className="mr-2" />
-            <label className="leading-0">Đồng ý nhận các thông tin và chương trình khuyến mãi của PNJ qua email, SMS , mạng xã hội…</label></div>
-          </div>
+          
        <div className=" text-center text-[14px]">
             {/* <div className="h-[40px] w-[340px] leading-[40px] text-[#fff] rounded-lg bg-[#003468] m-auto cursor-pointer">Đặt hàng</div> */}
             <input value={"Thanh Toán"} className="-[40px] w-[340px] leading-[40px] text-[#fff] rounded-lg bg-[#003468] m-auto cursor-pointer" type="submit" />
