@@ -37,7 +37,7 @@ import PrivateRoute from "@lib/private-route";
 import SocialLoginProvider from "../providers/social-login-provider";
 import SiteLayout from '@components/layout/layout';
 import nextI18NextConfig from '../../next-i18next.config'
-import TagManager from 'react-gtm-module';
+// import TagManager from 'react-gtm-module';
 
 function handleExitComplete() {
   if (typeof window !== "undefined") {
@@ -56,9 +56,9 @@ type AppPropsWithLayout = AppProps & {
 
 
 const CustomApp: any = ({ Component, pageProps }: AppPropsWithLayout) => {
-  useEffect(() => {
-    TagManager.initialize({ gtmId: process.env.NEXT_PUBLIC_GTM_ID });
-  }, []);
+  // useEffect(() => {
+  //   TagManager.initialize({ gtmId: process.env.NEXT_PUBLIC_GTM_ID });
+  // }, []);
   // Use the layout defined at the page level, if available
   const getLayout = Component.getLayout ?? ((page) => page);
   const authProps = Component.authenticate;
