@@ -188,7 +188,7 @@ const ProductSingleDetails: React.FC = ({ data }: any) => {
               loading={addToCartLoader}
             >
               <span className="py-2 3xl:px-8 ">
-                'Thêm vào giỏ hàng' 
+                Thêm vào giỏ hàng
               </span>
             </Button>
          
