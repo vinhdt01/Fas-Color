@@ -74,7 +74,7 @@ console.log('daay là data nha' , data)
       <Divider className="mb-0" />
       <Container>
        
-        <ProductSingleDetails data={data} />
+        {/* <ProductSingleDetails data={data} /> */}
         <DescriptionProduct/>
         <Comment/>
         <WarrantyProduct/>
