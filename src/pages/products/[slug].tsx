@@ -59,7 +59,7 @@ const Comment = dynamic(() => import("@components/comment/comment"));
 const DescriptionProduct = dynamic(() => import("@components/description-product/description-product"));
 const WarrantyProduct = dynamic(() => import("@components/warranty/warranty-product"));
 const FaqProduct = dynamic(() => import("@components/faq/faq-product"));
-// export {getServerSideProps} from '@framework/ssr/get-one-product'
+export {getServerSideProps} from '@framework/ssr/get-one-product'
 
 export default function ProductPage({ data }: any) {
   const router = useRouter();
@@ -74,7 +74,7 @@ console.log('daay là data nha' , data)
       <Divider className="mb-0" />
       <Container>
        
-        {/* <ProductSingleDetails data={data} /> */}
+        <ProductSingleDetails data={data} />
         <DescriptionProduct/>
         <Comment/>
         <WarrantyProduct/>
