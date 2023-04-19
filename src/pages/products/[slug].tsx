@@ -75,7 +75,7 @@ console.log('daay là data nha' , data)
       <Container>
        
         <ProductSingleDetails data={data} />
-        <DescriptionProduct/>
+        <DescriptionProduct description={data?.description}/>
         <Comment/>
         <WarrantyProduct/>
         <FaqProduct/>

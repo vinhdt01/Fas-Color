@@ -73,7 +73,7 @@ const Header: React.FC<Props> = ({
 		            </div>
 		            
 		            <Link href="/">
-		              <img className="w-[88px] h-[38.7px] cursor-pointer" src="/assets/images/LogoFas.png" alt="PNJ Logo"/>
+		              <img className="w-[88px] h-[38.7px] cursor-pointer" src="/assets/images/logo2.png" alt="PNJ Logo"/>
 		            </Link>
 		            
 		            <div className="flex cursor-pointer">
