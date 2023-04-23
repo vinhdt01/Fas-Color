@@ -3,7 +3,7 @@ import Footer from "@components/layout/footer/footer";
 import MobileNavigation from "@components/layout/mobile-navigation/mobile-navigation";
 import Search from "@components/common/search";
 import React from "react";
-
+import ChatGPT from '@components/chat/chatgpt';
 const SiteLayout: React.FC = ({ children }) => {
 	return (
 		<div className="flex flex-col min-h-screen">
@@ -16,6 +16,7 @@ const SiteLayout: React.FC = ({ children }) => {
 				}}
 			>
 				{children}
+				<ChatGPT/>
 			</main>
 			<Footer />
 			<MobileNavigation />
