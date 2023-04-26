@@ -5,7 +5,16 @@ import cn from 'classnames'
 import { useCart } from '@store/quick-cart/cart.context';
 import orderPost from '@framework/checkout/http.orders'
 import { useRouter } from "next/router";
-
+import { useAtom } from "jotai";
+import {
+  calculatePaidTotal,
+  calculateTotal,
+} from "@store/quick-cart/cart.utils";
+import {
+  couponAtom,
+  discountAtom,
+  verifiedResponseAtom,
+} from '@store/checkout';
 type FormValues = {
   gender:string;
   name: string;
@@ -33,16 +42,23 @@ const FormCheckout:React.FC = ({data}:any) => {
 
   const [ward , setWard] = useState()
 
-  const { items } = useCart();
 // console.log(items)
   const { register, handleSubmit } = useForm<FormValues>();
   const route = useRouter() 
+  const { items } = useCart();
+  const [verifiedResponse] = useAtom(verifiedResponseAtom);
 
+  const available_items = items?.filter(
+    (item) => !verifiedResponse?.unavailable_products?.includes(item.id)
+  );
+  const base_amount = calculateTotal(available_items);
   const onSubmit =  async (data) => 
   {
     data = {
-      ...data , items:JSON.stringify(items)
+      ...data , items:JSON.stringify(items) , base_amount:base_amount
     }
+    console.log(data , 'base_amount')
+
    let orderid=await  orderPost(data)
    return route.push(`/payment?orderid=${orderid}`)
   };
