@@ -1,5 +1,5 @@
 import axios from 'axios'
-let base_url:string = process.env.NEXT_PUBLIC_BASE_URL;
+let base_url:string = 'https://fascolor.onrender.com';
 
 let URL = base_url +  "/create-order";
 
