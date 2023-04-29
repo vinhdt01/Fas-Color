@@ -31,7 +31,7 @@ const ChatGPTConversation = () => {
         url: 'https://api.openai.com/v1/chat/completions',
         headers: { 
           'Content-Type': 'application/json', 
-          'Authorization': 'Bearer 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'
+          'Authorization': `Bearer ` + process.env.NEXT_PUBLIC_CHAT_GPT_KEY
         },
         data : data
       };
