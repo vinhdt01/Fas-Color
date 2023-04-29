@@ -28,19 +28,9 @@ export const menu = [
     path: "/",
     label: "About",
 
-},
+}
  
-  {
-    id: 6,
-    path: "/shops",
-    label: "Blog"
-  },
-  {
-    id: 7,
-    path: "/",
-    label: "Khuyến Mãi",
-  
-  }
+
 ];
 
 export const mobileMenu = [
