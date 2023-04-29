@@ -55,10 +55,16 @@ useEffect(() => {
                     href={`${ROUTES.COLLECTIONS}/${banner[0].slug}`}
                     className="mb-12 lg:mb-14 xl:mb-16 pb-0.5 lg:pb-1 xl:pb-0"
                 />
+
                 {
-                    data.length == 0 ? (<Spinner/>) :     (<NewProduct data={data}/>)
+                    data.length == 0 ? (<Spinner/>) :     (<NewProduct data={data} title="Sản Phẩm Bán Chạy"/>)
 
                 }
+                {
+                    data.length == 0 ? (<Spinner/>) :     (<NewProduct data={data} title="Sản Phẩm Mới"/>)
+
+                }
+
 
                 <ExclusiveBlock/>
             </Container>

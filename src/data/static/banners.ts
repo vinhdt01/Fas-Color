@@ -6,12 +6,12 @@ export const masonryBanner = [
     slug: "mens-collection",
     image: {
       mobile: {
-        url: "https://chawkbazar-laravel-shop.vercel.app/_next/image?url=https%3A%2F%2Fchawkbazarlaravel.s3.ap-southeast-1.amazonaws.com%2F192%2Fwomen9-1.jpg&w=640&q=75",
+        url: "/assets/images/banner/modern.png",
         width: 470,
         height: 232,
       },
       desktop: {
-        url: "https://chawkbazar-laravel-shop.vercel.app/_next/image?url=https%3A%2F%2Fchawkbazarlaravel.s3.ap-southeast-1.amazonaws.com%2F192%2Fwomen9-1.jpg&w=640&q=75",
+        url: "/assets/images/banner/modern.png",
         width: 1078,
         height: 425,
       },
@@ -24,12 +24,12 @@ export const masonryBanner = [
     slug: "new-sports",
     image: {
       mobile: {
-        url: "https://file.hstatic.net/1000351433/file/banner_chinh_op2_3cc94f6e60e5428da2af88be216269d0.png",
+        url: "/assets/images/banner/1a805870738ea9d0f09f.jpg",
         width: 232,
         height: 232,
       },
       desktop: {
-        url: "https://file.hstatic.net/1000351433/file/banner_chinh_op2_3cc94f6e60e5428da2af88be216269d0.png",
+        url: "/assets/images/banner/1a805870738ea9d0f09f.jpg",
         width: 425,
         height: 425,
       },
@@ -42,12 +42,12 @@ export const masonryBanner = [
     slug: "womens-collection",
     image: {
       mobile: {
-        url: "https://file.hstatic.net/1000351433/file/banner_chinh_op2_3cc94f6e60e5428da2af88be216269d0.png",
+        url: "/assets/images/banner/314d71bd5a43801dd952.jpg",
         width: 232,
         height: 232,
       },
       desktop: {
-        url: "https://file.hstatic.net/1000351433/file/banner_chinh_op2_3cc94f6e60e5428da2af88be216269d0.png",
+        url: "/assets/images/banner/314d71bd5a43801dd952.jpg",
         width: 425,
         height: 425,
       },
@@ -60,12 +60,12 @@ export const masonryBanner = [
     slug: "exclusive-sunglasses",
     image: {
       mobile: {
-        url: "https://file.hstatic.net/1000351433/file/banner_chinh_op2_3cc94f6e60e5428da2af88be216269d0.png",
+        url: "/assets/images/banner/f07eb68e9d70472e1e61.jpg",
         width: 232,
         height: 232,
       },
       desktop: {
-        url: "https://file.hstatic.net/1000351433/file/banner_chinh_op2_3cc94f6e60e5428da2af88be216269d0.png",
+        url: "/assets/images/banner/f07eb68e9d70472e1e61.jpg",
         width: 425,
         height: 425,
       },
@@ -96,12 +96,12 @@ export const masonryBanner = [
     slug: "new-backpack",
     image: {
       mobile: {
-        url: "https://file.hstatic.net/1000351433/file/banner_chinh_op2_3cc94f6e60e5428da2af88be216269d0.png",
+        url: "/assets/images/banner3.png",
         width: 470,
         height: 232,
       },
       desktop: {
-        url: "https://file.hstatic.net/1000351433/file/banner_chinh_op2_3cc94f6e60e5428da2af88be216269d0.png",
+        url: "/assets/images/banner3.png",
         width: 1078,
         height: 425,
       },
@@ -239,25 +239,8 @@ export const promotionBanner = [
       },
     },
     type: "small",
-  },
-  {
-    id: 5,
-    title: "Winter Collection",
-    slug: "winter-collection",
-    image: {
-      mobile: {
-        url: "https://bizweb.dktcdn.net/100/369/010/themes/845311/assets/slide-img2.jpg?1675818226708",
-        width: 450,
-        height: 180,
-      },
-      desktop: {
-        url: "https://bizweb.dktcdn.net/100/369/010/themes/845311/assets/slide-img2.jpg?1675818226708",
-        width: 1440,
-        height: 570,
-      },
-    },
-    type: "small",
-  },
+  }
+ 
 ];
 
 // Demo One -> Modern Demo
