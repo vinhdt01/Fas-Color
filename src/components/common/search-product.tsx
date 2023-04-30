@@ -13,7 +13,7 @@ type SearchProductProps = {
 
 const SearchProduct: React.FC<SearchProductProps> = ({ item }) => {
   const { price, basePrice } = usePrice({
-    amount: item?.sale_price ? item?.sale_price : item?.price!,
+    amount: Number(item?.price) ,
     baseAmount: item?.price,
   });
 
@@ -21,13 +21,13 @@ const SearchProduct: React.FC<SearchProductProps> = ({ item }) => {
 
   return (
     <Link
-      href={`${ROUTES.PRODUCT}/${item?.slug}`}
+      href={`${ROUTES.PRODUCT}/${item?._id}`}
       className="group w-full h-auto flex justify-start items-center"
     >
       <div className="relative flex w-16 md:w-24 h-16 md:h-24 rounded-md overflow-hidden bg-gray-200 flex-shrink-0 cursor-pointer ltr:mr-4 rtl:ml-4">
         <Image
           src={
-            item?.image?.original ?? "/assets/placeholder/search-product.svg"
+            item?.main_photoURL ?? "/assets/placeholder/search-product.svg"
           }
           width={96}
           height={96}
@@ -42,7 +42,7 @@ const SearchProduct: React.FC<SearchProductProps> = ({ item }) => {
         <div className="text-heading font-semibold text-sm">
           {!isEmpty(variations) ? (
             <VariationPrice
-              minPrice={item.min_price}
+              minPrice={Number(item.price)}
               maxPrice={item.max_price}
               basePriceClassName="text-heading font-semibold text-sm"
               discountPriceClassName="ltr:pl-2 rtl:pr-2 text-gray-400 font-normal"

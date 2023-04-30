@@ -18,13 +18,13 @@ import noResult from "@assets/not-found.svg";
 import { ROUTES } from "@lib/routes";
 import { useRouter } from "next/router";
 import Button from "@components/ui/button";
-
+import axios from 'axios'
 export default function Search() {
   const router = useRouter();
   const { t } = useTranslation("common");
   const { displaySearch, closeSearch } = useUI();
   const [searchText, setSearchText] = React.useState("");
-  // const [data, setData] = React.useState("");
+  const [data, setData] = React.useState("");
   // const [loading, setLoading] = React.useState("");
 
   // const { data, isLoading: loading } = useProductsInfiniteQuery({
@@ -32,7 +32,6 @@ export default function Search() {
   //   limit: 4
   // });
   // ADD FAKE DATA
-  const data = null;
   const loading = null;
   function handleSearch(e: React.SyntheticEvent) {
     e.preventDefault();
@@ -40,7 +39,19 @@ export default function Search() {
   function handleAutoSearch(e: React.FormEvent<HTMLInputElement>) {
     const searchValue = e.currentTarget.value;
 
-    if (!searchValue.startsWith(" ")) setSearchText(searchValue);
+    if (!searchValue.startsWith(" ")) {
+      setSearchText(searchValue)
+      axios.post(process.env.NEXT_PUBLIC_BASE_URL + '/search' , {
+       
+          name:searchValue
+     
+      }
+      )
+      .then(res => setData(res))
+
+    };
+
+    
   }
 
   function clear() {
@@ -117,9 +128,9 @@ export default function Search() {
                           <SearchResultLoader uniqueKey={`top-search-${idx}`} />
                         </div>
                       ))
-                    ) : data?.pages[0]?.data.length ? (
+                    ) : data?.data?.product ? (
                       <>
-                        {data?.pages[0]?.data.map((item, index) => (
+                        {data?.data?.product.map((item, index) => (
                           <div
                             className="p-4 md:p-5 border-b border-gray-150 relative last:border-b-0"
                             onClick={closeSearch}
@@ -128,23 +139,7 @@ export default function Search() {
                             <SearchProduct item={item} key={index} />
                           </div>
                         ))}
-                        {data?.pages?.[0]?.paginatorInfo?.total > 4 && (
-                          <div className="w-full overflow-hidden border-t border-gray-150">
-                            {/*<Link*/}
-                            {/*  href={`${ROUTES.SEARCH}?q=${searchText}`}*/}
-                            {/*  className="w-full block text-sm md:text-base text-center px-4 py-3 lg:py-3.5 bg-gray-200 text-heading text-opacity-80 transition hover:text-opacity-100"*/}
-                            {/*>*/}
-                            {/*  {t("text-load-more-products")}*/}
-                            {/*</Link>*/}
-                            <Button
-                              variant="custom"
-                              onClick={handleOnLoadMore}
-                              className="w-full block text-sm md:text-base text-center px-4 py-3 lg:py-3.5 bg-gray-200 text-heading text-opacity-80 transition hover:text-opacity-100"
-                            >
-                              {t("text-load-more-products")}
-                            </Button>
-                          </div>
-                        )}
+                   
                       </>
                     ) : (
                       <div className="w-full h-full px-5 md:px-10 mb-4 md:pb-6 pt-8 md:pt-12 flex items-center justify-center">
