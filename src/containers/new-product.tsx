@@ -8,7 +8,6 @@ const NewProduct = ({data , title}) => {
   return (
      <>
       <ProductsFeatured data={data} sectionHeading="text-featured-products" title={title}/>
-      <ShowMoreBtn/>
       </>
   )
 }

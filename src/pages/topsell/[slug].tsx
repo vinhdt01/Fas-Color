@@ -26,7 +26,7 @@ const Banner = dynamic(
 );
 
 // export {getServerSideProps} from '@framework/ssr/get-product'
-export default function Home() {
+export default function TopSell() {
 const [swiperKey, setSwiperKey] = useState(0);
 const [data, setData] = useState([]);
 
@@ -45,28 +45,18 @@ useEffect(() => {
         <>
             <BannerSliderBlock data={promotionBanner} />
 
-            <BannerBlock data={masonryBanner} />
 
             <Container>
-          
-              
+             
+         
 
                 {
                     data.length == 0 ? (<Spinner/>) :     (<NewProduct data={data} title="Sản Phẩm Bán Chạy"/>)
 
                 }
-                {
-                    data.length == 0 ? (<Spinner/>) :     (<NewProduct data={data} title="Sản Phẩm Mới"/>)
-
-                }
-                 {
-                    data.length == 0 ? (<Spinner/>) :     (<NewProduct data={data.slice(2,4)} title="Sản Phẩm Khuyến Mãi"/>)
-
-                }
+           
 
 
-
-                {/* <ExclusiveBlock/> */}
             </Container>
             <Divider className="mb-0" />
         </>
@@ -75,6 +65,6 @@ useEffect(() => {
 
 }
 
-Home.getLayout = getLayout;
+TopSell.getLayout = getLayout;
 
 

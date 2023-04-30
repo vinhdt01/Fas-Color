@@ -1,34 +1,33 @@
 export const menu = [
   {
-    id: 2,
-    path: "/search?category=men",
-    label: "Shop",
-   
+    id: 1,
+    path: "/promotions/san-pham-khuyen-mai",
+    label: "Promotions",
+ 
   },
   {
     id: 2,
-    path: "/search?category=men",
-    label: "Sale",
+    path: "/topsell/san-pham-ban-chay",
+    label: "TopSell",
  
   },
   {
     id: 3,
-    path: "/search?category=women",
-    label: "News",
+    path: "/new/san-pham-moi",
+    label: "New",
 
   },
   {
     id: 4,
-    path: "/search?category=men",
+    path: "tel:0702686901",
     label: "Contact",
    
   },
   {
     id: 5,
-    path: "/",
+    path: "https://www.facebook.com/profile.php?id=100086798198788",
     label: "About",
-
-}
+  }
  
 
 ];
@@ -36,46 +35,32 @@ export const menu = [
 export const mobileMenu = [
   {
     id: 1,
-    path: "/",
-    label: "Shop",
-   
+    path: "/promotions/san-pham-khuyen-mai",
+    label: "Promotions",
+ 
   },
   {
     id: 2,
-    path: "/search?category=men",
-    label: "Sale",
+    path: "/topsell/san-pham-ban-chay",
+    label: "TopSell",
  
   },
   {
     id: 3,
-    path: "/search?category=women",
+    path: "/new/san-pham-moi",
     label: "New",
- 
+
   },
   {
     id: 4,
-    path: "/search?category=women",
+    path: "tel:0702686901",
     label: "Contact",
-  
-  }, 
- 
+   
+  },
   {
     id: 5,
-    path: "/search?category=adssf",
+    path: "https://www.facebook.com/profile.php?id=100086798198788",
     label: "About",
-  
-  }, 
-  {
-    id: 6,
-    path: "/shops",
-    label: "Blog"
-  },
-  {
-    id: 7,
-    path: "/",
-    label: "Khuyến mãi",
-    
-  },
-  
+  }
 
 ]
