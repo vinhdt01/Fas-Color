@@ -66,9 +66,9 @@ const ChatGPTConversation = () => {
     bottomRef.current?.scrollIntoView();
   }, [chatLog]);
     return (
-        <div className="fixed z-50 right-[40px] bottom-[160px] ">
+        <div className="fixed z-50 md:right-[40px] right-0  bottom-[160px] ">
 
-           <div className="w-[380px] h-[500px] ">
+           <div className=" w-[380px]  h-[500px] ">
                <div className="bg-[#097deb] text-left h-[40px] text-[#f7eded] font-normal px-[10px] leading-[40px] rounded-t-lg">CHATBOT [Trả lời tin nhắn tự động]</div>
                <div className="bg-[#f7eded] h-[450px]   px-[10px] flex flex-col justify-between  pt-[15px]">
                 <div  className="overflow-auto">
