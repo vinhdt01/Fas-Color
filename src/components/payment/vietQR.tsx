@@ -18,10 +18,10 @@ export default function VietQR({handleSetShow}:any) {
     .then((res)=> {
       console.log(res.data , 'dfg')
       if(res?.data.success == true) { 
-        router.push('/paymentsuccessful/' + res.data.result.orderId)
+        router.push('/paymentsuccessful/orderID' + res.data.result.orderId)
        }  
        else {
-        router.push('/paymentfailure/' + res.data.result.orderId)
+        router.push('/paymentfailure/orderID' + res.data.result.orderId)
 
        } 
     })
