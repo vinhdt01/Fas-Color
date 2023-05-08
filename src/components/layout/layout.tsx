@@ -8,15 +8,10 @@ import { initGA, logPageView } from '../../../analytics';
 import { useEffect } from 'react';
 
 const SiteLayout: React.FC = ({ children }) => {
-	useEffect(() => {
-		if (!window.GA_INITIALIZED) {
-		  initGA('361834544'); // Thay YOUR_TRACKING_ID bằng mã theo dõi (tracking ID) của bạn
-		  window.GA_INITIALIZED = true;
-		}
-		logPageView();
-	  }, []);
+	
 	return (
 		<div className="flex flex-col min-h-screen">
+		
 			<Header />
 			<main
 				className="relative flex-grow"

@@ -15,6 +15,15 @@ export default class CustomDocument extends Document {
 		const { locale } = this.props.__NEXT_DATA__;
 		return (
       <Html dir={getDirection(locale)}>
+		 <script async src={`https://www.googletagmanager.com/gtag/js?id=361834544`} /> 
+          <script dangerouslySetInnerHTML={{ 
+            __html: `
+              window.dataLayer = window.dataLayer || []; 
+              function gtag(){dataLayer.push(arguments);} 
+              gtag('js', new Date()); 
+              gtag('config', '361834544', { page_path: window.location.pathname, }); 
+            `, 
+          }} /> 
         <Head />
         <body>
         <Main />
