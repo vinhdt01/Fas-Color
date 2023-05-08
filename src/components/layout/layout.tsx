@@ -4,14 +4,9 @@ import MobileNavigation from "@components/layout/mobile-navigation/mobile-naviga
 import Search from "@components/common/search";
 import React from "react";
 import ChatGPT from '@components/chat/chatgpt';
-import { initGA, logPageView } from '../../../analytics';
-import { useEffect } from 'react';
-
 const SiteLayout: React.FC = ({ children }) => {
-	
 	return (
 		<div className="flex flex-col min-h-screen">
-		
 			<Header />
 			<main
 				className="relative flex-grow"

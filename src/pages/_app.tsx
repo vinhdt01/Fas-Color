@@ -1,4 +1,3 @@
-import App, { NextWebVitalsMetric } from 'next/app' 
 
 import type { AppProps } from "next/app";
 import { useRouter } from "next/router";
@@ -38,8 +37,9 @@ import PrivateRoute from "@lib/private-route";
 import SocialLoginProvider from "../providers/social-login-provider";
 import SiteLayout from '@components/layout/layout';
 import nextI18NextConfig from '../../next-i18next.config'
+import Script from 'next/script'
 // import TagManager from 'react-gtm-module';
-
+import GoogleAnalytics from "@bradgarropy/next-google-analytics"
 function handleExitComplete() {
   if (typeof window !== "undefined") {
     window.scrollTo({ top: 0 });
@@ -62,7 +62,7 @@ const CustomApp: any = ({ Component, pageProps }: AppPropsWithLayout) => {
   // }, []);
   // Use the layout defined at the page level, if available
   const getLayout = Component.getLayout ?? ((page) => page);
-  // const authProps = Component.authenticate;
+  const authProps = Component.authenticate;
 
   const [queryClient] = useState(() => new QueryClient());
 
@@ -73,6 +73,9 @@ const CustomApp: any = ({ Component, pageProps }: AppPropsWithLayout) => {
   return (
     
     <AnimatePresence exitBeforeEnter onExitComplete={handleExitComplete}>
+     <GoogleAnalytics measurementId="G-SF9E15ZWSZ" />
+      
+       
       <QueryClientProvider client={queryClient}>
         <Hydrate state={pageProps.dehydratedState}>
           {/* <AppSettings> */}
@@ -95,11 +98,3 @@ const CustomApp: any = ({ Component, pageProps }: AppPropsWithLayout) => {
 
 export default appWithTranslation(CustomApp , nextI18NextConfig);
 
-export function reportWebVitals({ id, name, label, value, }: NextWebVitalsMetric): void { 
-  window.gtag('event', name, { 
-    event_category: label === 'web-vital' ? 'Web Vitals' : 'Next.js custom metric', 
-    value: Math.round(name === 'CLS' ? value * 1000 : value), // values must be integers 
-    event_label: id, // id unique to current page load 
-    non_interaction: true, // avoids affecting bounce rate. 
-  }) 
-} 
