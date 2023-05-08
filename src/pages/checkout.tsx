@@ -25,7 +25,7 @@ export default function CheckoutPage({data}:any) {
               <RightSideView />
             </div>
             <div className="w-full space-y-6">
-                <FormCheckout  data={data}/>
+                {/* <FormCheckout  data={data}/> */}
             </div>
           </div>
         </div>

@@ -61,7 +61,7 @@ const CustomApp: any = ({ Component, pageProps }: AppPropsWithLayout) => {
   // }, []);
   // Use the layout defined at the page level, if available
   const getLayout = Component.getLayout ?? ((page) => page);
-  const authProps = Component.authenticate;
+  // const authProps = Component.authenticate;
 
   const [queryClient] = useState(() => new QueryClient());
 
