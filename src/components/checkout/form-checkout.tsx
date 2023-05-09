@@ -34,6 +34,7 @@ type FormValues = {
 };
 
 const FormCheckout:React.FC = ({data}:any) => {
+  console.log('123' ,data)
   // const [province , setProvince] = useState(data.data.data)
   const [methodDelivery , setMethodDelivery] = useState<string>('at-home')
   const [province , setProvince] = useState()
@@ -68,9 +69,9 @@ const FormCheckout:React.FC = ({data}:any) => {
     return;
     }
     else {
-      axios.get(`https://vn-public-apis.fpo.vn/districts/getByProvince?provinceCode=${province}&limit=-1`)
+      axios.get(`https://provinces.open-api.vn/api/p/${province}?depth=2`)
       .then((datas) =>  {
-        setDistrict(datas.data.data.data)
+        setDistrict(datas.data.districts)
                  }
       )
     }
@@ -80,9 +81,9 @@ const FormCheckout:React.FC = ({data}:any) => {
     return;
     }
     else {
-      axios.get(`https://vn-public-apis.fpo.vn/wards/getByDistrict?districtCode=${specialdistrict}&limit=-1`)
+      axios.get(`https://provinces.open-api.vn/api/d/${specialdistrict}?depth=2`)
       .then((datas) =>  {
-        setWard(datas.data.data.data)
+        setWard(datas.data.wards)
             }
       )
     }
@@ -91,7 +92,6 @@ const FormCheckout:React.FC = ({data}:any) => {
     setProvince(e.target.value)
   }
   const handleChangeDistrict = (e:any) => {
-    console.log(e.target.value)
     setSpecialdistrict(e.target.value)
   }
      return (
@@ -134,7 +134,7 @@ const FormCheckout:React.FC = ({data}:any) => {
 <div className="grid grid-cols-2 gap-2">
                     {/* <input type="text" className="border-solid border-[1px] border-indigo-600 flex-1  h-[40px] mb-2 px-2 rounded-lg" placeholder="Chọn Tỉnh/TP(*)-"/> */}
                     <select  {...register('province' , {required:true}) }  onChange={handleChangeProvince}  className="border-solid border-[1px] border-indigo-600 flex-1  h-[40px] mb-2 px-2 rounded-lg" id="cars" >
-                      {data?.data?.data.map((value , index) => (
+                      {data.map((value , index) => (
     <option  value={value.code}>{value.name}</option>
 
                       ))}  

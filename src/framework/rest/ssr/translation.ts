@@ -20,7 +20,7 @@ import nextI18NextConfig from '../../../../next-i18next.config'
 // };
 
 export const getStaticProps: GetStaticProps = async ({ locale }:any) => {
-  const res = await fetch('https://vn-public-apis.fpo.vn/provinces/getAll?limit=-1')
+  const res = await fetch('https://provinces.open-api.vn/api/p/')
     const data = await res.json()
     return {
       props: {

@@ -6,7 +6,7 @@ import { getLayout } from "@components/layout/layout";
 import Divider from "@components/ui/divider";
 import Container from "@components/ui/container";
 import FormCheckout from '@components/checkout/form-checkout'
-// export {getStaticProps} from '@framework/ssr/translation'
+export {getStaticProps} from '@framework/ssr/translation'
 
 
 const RightSideView = dynamic(
@@ -25,7 +25,7 @@ export default function CheckoutPage({data}:any) {
               <RightSideView />
             </div>
             <div className="w-full space-y-6">
-                {/* <FormCheckout  data={data}/> */}
+                <FormCheckout  data={data}/>
             </div>
           </div>
         </div>
