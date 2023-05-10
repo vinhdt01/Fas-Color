@@ -4,6 +4,8 @@ import MobileNavigation from "@components/layout/mobile-navigation/mobile-naviga
 import Search from "@components/common/search";
 import React from "react";
 import ChatGPT from '@components/chat/chatgpt';
+import MessengerCustomerChat from 'react-messenger-customer-chat';
+
 const SiteLayout: React.FC = ({ children }) => {
 	return (
 		<div className="flex flex-col min-h-screen">
@@ -17,6 +19,11 @@ const SiteLayout: React.FC = ({ children }) => {
 			>
 				{children}
 				<ChatGPT/>
+				<MessengerCustomerChat
+    pageId="100086798198788"
+    appId="823275489155839"
+  />,
+
 			</main>
 			<Footer />
 			<MobileNavigation />
