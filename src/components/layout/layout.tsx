@@ -18,11 +18,13 @@ const SiteLayout: React.FC = ({ children }) => {
 				}}
 			>
 				{children}
+				<a href="https://www.facebook.com/profile.php?id=100086798198788" className="relative ">
+        <div className="fixed  right-[40px] bottom-[110px] cursor-pointer">
+          <img className="w-[60px] h-[60px] rounded-full" src="https://www.facebook.com/images/fb_icon_325x325.png"/>
+        </div>
+       </a>
 				<ChatGPT/>
-				<MessengerCustomerChat
-    pageId="100086798198788"
-    appId="823275489155839"
-  />,
+				,
 
 			</main>
 			<Footer />
