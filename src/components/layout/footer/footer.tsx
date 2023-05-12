@@ -35,7 +35,7 @@ const Footer:React.FC = () => {
           <div className="w-full h-[1px] bg-[#b3b3b3] xl:px-36 mx-0"></div>
 
           <div className="max-w-[1200px] m-auto my-[20px] px-2 ">
-          <img className="w-[200px] h-[86.78px]" src="/assets/images/LogoFas.png" />
+          <img className="w-[200px] h-[86.78px]" src="/assets/images/logo2.png" />
           </div>
           <div className="flex max-w-[1200px] m-auto xl:flex-row flex-col ">
               <div className="sm:w-[357px] w-[100%]  xl:ml-[0px] px-2 pb-5 xl:mb-0">
