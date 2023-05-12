@@ -85,10 +85,12 @@ const Footer:React.FC = () => {
               <div className="xl:w-[280px] pl-2  xl:ml-[25px] xl:mt-0 mt-[20px] leading-7">
                       <div  className="text-[14px] text-[#282828] font-bold">KẾT NỐI VỚI CHÚNG TÔI</div>
                       <div className="flex">
+                        <a href="https://www.facebook.com/profile.php?id=100086798198788">
                       <img className="h-[40px] w-[40px] px-1" data-src="" alt="Facebook" src="https://cdn.pnj.io/images/image-update/footer/facebook.svg"/>
-                      <img className="h-[40px] w-[40px] px-1" data-src="" alt="Facebook" src="https://cdn.pnj.io/images/image-update/footer/instagram.svg"/>
-                      <img className="h-[40px] w-[40px] px-1" data-src="" alt="Facebook" src="https://cdn.pnj.io/images/image-update/footer/youtube.svg"/>
-                      <img className="h-[40px] w-[40px] px-1" data-src="" alt="Facebook" src="https://cdn.pnj.io/images/image-update/footer/email.svg"/>
+                     </a>
+                     <a href="https://shopee.vn/fascolor">
+                      <img className="h-[40px] w-[40px] px-1" data-src="" alt="Facebook" src="https://classic.vn/wp-content/uploads/2022/04/logo-shopee.png"/>
+                     </a>
                       </div>
                       <div className="text-[14px] ">Nhận các thông tin khuyến mãi hấp dẫn</div>     
                       <div className="app cursor-pointer inline-flex items-center h-[20px] rounded-md bg-[#03a5fa]">
@@ -98,25 +100,7 @@ const Footer:React.FC = () => {
               </div>
           </div>
           <div>
-              <div className=" flex xl:justify-end justify-between flex-col md:flex-row max-w-[1200px] mt-3 m-auto h-[100px]">
-               <div className="mr-5 w-[280px] xl:ml-0 ml-2">
-                      <p className="text-[14px] text-[#282828] font-bold mb-[15px] ">PHƯƠNG THỨC THANH TOÁN</p>
-                   
-                      <div className="flex justify-between mt-[10px] mb-5">
-                          <img className="img-lazyload icon-visa w-[38px]" data-src="" alt="" src="https://www.pnj.com.vn/design/themes/pnjrovski/media/images/payments/visa.svg"/>
-                          <img className="img-lazyload icon-master w-[38px]" data-src="" alt=""  src="https://www.pnj.com.vn/design/themes/pnjrovski/media/images/payments/mastercard.svg"/>           
-                          <img className="img-lazyload icon-visa w-[38px]" data-src="" alt="" src="https://www.pnj.com.vn/design/themes/pnjrovski/media/images/payments/jcb.svg"/>
-                          <img className="img-lazyload icon-visa w-[38px]" data-src="" alt="" src="https://www.pnj.com.vn/design/themes/pnjrovski/media/images/payments/thanhtoantienmat.svg"/>
-                          <img className="img-lazyload icon-visa w-[38px]" data-src="" alt="" src="https://www.pnj.com.vn/design/themes/pnjrovski/media/images/payments/internetBanking.svg"/>
-                          <img className="img-lazyload icon-visa w-[38px]" data-src="" alt="" src="https://www.pnj.com.vn/design/themes/pnjrovski/media/images/payments/tragop.svg"/>
-                      </div>
-               </div>
-    
-      <div className="w-[280px]  xl:ml-0 ml-2 ">
-                      <p className="text-[14px] text-[#282828] font-bold mb-[5px] ">CHỨNG NHẬN</p>
-                       <img className="w-[115px] h-[37.7px] mt-[5px]" src="https://cdn.pnj.io/images/image-update/op-da-thong-bao-bo-cong-thuong-183x60.png"/>
-      </div>
-              </div>
+            
           </div>
           </div>
      </div>
