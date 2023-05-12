@@ -34,7 +34,7 @@ const [data, setData] = useState([]);
 useEffect(() => {
   setSwiperKey(1);
   console.log(process.env.NEXT_PUBLIC_BASE_URL , 'dsdsadsa');
-  axios.get('https://fascolor.onrender.com/product')
+  axios.get('https://fascolor-server.onrender.com/product')
   .then((res:any) => {
       setData(res.data)
   })

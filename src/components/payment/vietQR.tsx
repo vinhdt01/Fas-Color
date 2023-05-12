@@ -12,7 +12,7 @@ export default function VietQR({handleSetShow}:any) {
     let baseURL = process.env.NEXT_PUBLIC_BASE_URL;
 
  
-    axios.put(`https://fascolor.onrender.com/update-payment?orderid=${query.orderid}` , {
+    axios.put(`https://fascolor-server.onrender.com/update-payment?orderid=${query.orderid}` , {
       paymentMethod:"viet-qr"
     })
     .then((res)=> {

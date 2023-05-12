@@ -1,5 +1,5 @@
 import axios from 'axios'
-let base_url:string = 'https://fascolor.onrender.com';
+let base_url:string = 'https://fascolor-server.onrender.com';
 
 let URL = base_url +  "/create-order";
 

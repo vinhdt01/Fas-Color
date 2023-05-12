@@ -11,7 +11,7 @@ const PaymentSuccessfully = () => {
   const { query } = router;
   
   useEffect(() => {
-    axios.get(`https://fascolor.onrender.com/${query.orderID}`)
+    axios.get(`https://fascolor-server.onrender.com/getorders/${query.orderID}`)
     .then(res => {
       setData(res.data.data)
     })
@@ -22,7 +22,7 @@ const PaymentSuccessfully = () => {
         <h1>Thanh toán thành công</h1>
         <Info data={data}/>
         <Link href="/"  >
-          <div className="bg-[#5f5af6] w-[110px] px-2 h-[45px] mt-[20px] cursor-pointer flex items-center justify-center rounded-full font-bold text-[#fff] text-center">Trang chủ</div>
+          <div className="bg-[#242266] w-[110px] px-2 h-[45px] mt-[20px] cursor-pointer flex items-center justify-center rounded-full font-bold text-[#fff] text-center">Trang chủ</div>
         </Link>
 
     </div>

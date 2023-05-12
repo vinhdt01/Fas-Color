@@ -41,7 +41,7 @@ export default function Search() {
 
     if (!searchValue.startsWith(" ")) {
       setSearchText(searchValue)
-      axios.post('https://fascolor.onrender.com/search' , {
+      axios.post('https://fascolor-server.onrender.com/search' , {
        
           name:searchValue
      

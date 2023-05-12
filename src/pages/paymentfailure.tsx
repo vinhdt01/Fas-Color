@@ -26,7 +26,7 @@ const PaymentFailure = () => {
   const { query } = router;
   
   useEffect(() => {
-    axios.get(`https://fascolor.onrender.com/${query.orderID}`)
+    axios.get(`https://fascolor-server.onrender.com/getorders/${query.orderID}`)
     .then(res => {
       setData(res.data.data)
     })
