@@ -76,9 +76,9 @@ console.log('daay là data nha' , data)
        
         <ProductSingleDetails data={data} />
         <DescriptionProduct description={data?.description}/>
-        <Comment/>
-        <WarrantyProduct/>
-        <FaqProduct/>
+        {/* <Comment/> */}
+        {/* <WarrantyProduct/> */}
+        {/* <FaqProduct/> */}
         {/* <Subscription /> */}
       </Container>
     </>
