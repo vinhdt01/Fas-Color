@@ -70,7 +70,7 @@ function ImageSlider({handleShowGalaryFromSlide , id , data}) {
  <div className="overflow-hidden">
  <div ref={ref}>
    {imgs.map((data , i) => (
-      <img className={classNames(wordData.id==i?"clicked":"" , 'w-[76px] h-[76px] mb-2 border-2 bg-[#f7f7f7]' , 'rounded-lg')} src={data.value} onClick={() => handleClick(i)} />
+      <img className={classNames(wordData.id==i?"clicked":"" , 'w-[76px] h-[76px] mb-2 border-2 bg-[#f7f7f7] object-cover' , 'rounded-lg')} src={data.value} onClick={() => handleClick(i)} />
             ))}    
     </div>  
        
@@ -78,7 +78,7 @@ function ImageSlider({handleShowGalaryFromSlide , id , data}) {
  </div>
      </div>
 <div className="relative">
-          <img onClick={handleShowGalaryFromSlide} className="bg-[#f7f7f7] w-[473px] h-[473px]" src={wordData.value} height="300" width="500" /> 
+          <img onClick={handleShowGalaryFromSlide} className="bg-[#f7f7f7] w-[473px] h-[473px]  object-cover" src={wordData.value} height="300" width="500" /> 
           <img className="w-9 h-9 absolute top-2 right-2" src="https://cdn.pnj.io/images/image-update/tag-product/new-icon-3-w29.svg"/>
              <div className="flex justify-center mt-2 cursor-pointer" onClick={handleShow}>
                 <img src="https://cdn.pnj.io/images/p_detail/anh.svg"/>

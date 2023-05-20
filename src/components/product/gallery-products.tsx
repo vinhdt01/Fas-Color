@@ -69,7 +69,7 @@ const GalleryProduct: React.FC = ({handleShow , handleShowGalaryFromSlide , id ,
                </SwiperSlide> */}
                {data && data.map((item , index) => (
                 <SwiperSlide>
-                <img className="bg-white  md:w-[800px] md:h-[600px] rounded-lg" src={item}/>
+                <img className="bg-white  md:w-[800px] md:h-[600px] rounded-lg object-cover" src={item}/>
    
                 </SwiperSlide>
                ))}
