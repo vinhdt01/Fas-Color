@@ -11,7 +11,7 @@ const PaymentSuccessfully = () => {
   const { query } = router;
   
   useEffect(() => {
-    axios.get(`https://fascolor-server.onrender.com/getorders/${query.orderID}`)
+    axios.get(`${process.env.NEXT_PUBLIC_BASE_URL}/getorders/${query.orderID}`)
     .then(res => {
       setData(res.data.data)
     })

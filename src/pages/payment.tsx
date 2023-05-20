@@ -28,7 +28,7 @@ export default function PaymentPage() {
   //  }, [router.query])
   const handleSetShow = () => {
     setShow(!show)
-    axios.put(`https://fascolor-server.onrender.com/update-payment?orderid=${query.orderid}` , {
+    axios.put(`${process.env.NEXT_PUBLIC_BASE_URL}/update-payment?orderid=${query.orderid}` , {
       paymentMethod:"viet-qr"
     })
   
@@ -37,7 +37,7 @@ export default function PaymentPage() {
     let baseURL = process.env.NEXT_PUBLIC_BASE_URL;
 
  
-    axios.put(`https://fascolor-server.onrender.com/update-payment?orderid=${query.orderid}` , {
+    axios.put(`${process.env.NEXT_PUBLIC_BASE_URL}/update-payment?orderid=${query.orderid}` , {
       paymentMethod:"cod"
     })
     .then((res)=> {
