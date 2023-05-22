@@ -37,7 +37,7 @@ const Footer:React.FC = () => {
           <div className="max-w-[1200px] m-auto my-[20px] px-2 ">
           <img className="w-[200px] h-[86.78px]" src="/assets/images/logo2.png" />
           </div>
-          <div className="flex max-w-[1200px] m-auto xl:flex-row flex-col ">
+          <div className="flex max-w-[1200px] m-auto xl:flex-row flex-col justify-between">
               <div className="sm:w-[357px] w-[100%]  xl:ml-[0px] px-2 pb-5 xl:mb-0">
                   <div className="text-[11.5px] leading-6">
                       <div className="text-[14px] text-[#282828] font-medium">© 2023 FasColor</div>
@@ -65,7 +65,7 @@ const Footer:React.FC = () => {
               </div>
     </div>
     
-              <div className="xl:w-[280px] w-[100%] xl:ml-[25px]  xl:mb-0 mb-4  text-[13px] text-[#282828] cursor-pointer leading-7">
+              {/* <div className="xl:w-[280px] w-[100%] xl:ml-[25px]  xl:mb-0 mb-4  text-[13px] text-[#282828] cursor-pointer leading-7">
                       <div className="flex pl-2 justify-between text-[14px] text-[#282828] font-bold" onClick={handleShowBrand}>
                         <p>DỊCH VỤ KHÁCH HÀNG</p>
                         <img className={showBrand ? 'rotate-180 xl:hidden mr-4' : 'xl:hidden mr-4'} src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyMC43MDciIGhlaWdodD0iMTAuNzA3IiB2aWV3Qm94PSIwIDAgMjAuNzA3IDEwLjcwNyI+CiAgPGcgaWQ9Ikdyb3VwXzEyMyIgZGF0YS1uYW1lPSJHcm91cCAxMjMiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDUuMzU0IDAuMzU0KSI+CiAgICA8bGluZSBpZD0iTGluZV8zNyIgZGF0YS1uYW1lPSJMaW5lIDM3IiB4Mj0iMTAiIHkyPSIxMCIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTUpIiBmaWxsPSJub25lIiBzdHJva2U9IiMwMDM0NjgiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLXdpZHRoPSIwLjUiLz4KICAgIDxsaW5lIGlkPSJMaW5lXzM4IiBkYXRhLW5hbWU9IkxpbmUgMzgiIHkxPSIxMCIgeDI9IjEwIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSg1KSIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjMDAzNDY4IiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS13aWR0aD0iMC41Ii8+CiAgPC9nPgo8L3N2Zz4K"/>
@@ -79,7 +79,7 @@ const Footer:React.FC = () => {
                           <div>Chính sách bảo mật thông tin khách hàng</div>
                           <div>Câu hỏi thường gặp</div>    
                      </div>                 
-              </div>
+              </div> */}
               <div className="w-[100%] h-[0.5px] bg-black xl:hidden"></div>
     
               <div className="xl:w-[280px] pl-2  xl:ml-[25px] xl:mt-0 mt-[20px] leading-7">
