@@ -91,23 +91,15 @@ const ProductOverlayCard: React.FC<ProductProps> = ({
             alt={"Product Image"}
             className="object-cover transition duration-500 ease-in-out transform group-hover:scale-110"
           />
-                  <img className="absolute right-2 bottom-1 w-7 h-7" src="https://cdn.pnj.io/images/image-update/tag-product/icon-tragop-2.svg" alt="installment"/>
                   {/* <img  className="absolute left-2 bottom-1 w-7 h-7" src="https://cdn.pnj.io/images/image-update/2022/10/pnjfast/PNJfast-Giaotrong3h.svg" alt="pnjfast" /> */}
                   <img  className="absolute right-2 top-1 w-7 h-7" src="https://cdn.pnj.io/images/image-update/tag-product/new-icon-3-w29.svg" alt="new"/>
         </div>
         <div
-          className="flex flex-col items-center justify-center text-center px-4 pt-4 pb-2 text-[14px]"
+          className="flex flex-col items-center justify-center text-center px-4 pb-4 text-[14px]"
           title="hello">
           <div className="sm:h-auto h-[45px] overflow-hidden">{item?.name}</div>
           <div className="text-[#c48c46]">{price}</div>
-          <div className="text-[#eb4d4e] text-[11px]">Mua hóa đơn trên 300k để giảm phí ship</div>
-          <div className="flex justify-between w-[100%] text-[11px] mt-6">
-            <div className="flex items-center">
-              <FontAwesomeIcon className="text-[#ffc107] w-[12px] mr-[4px]" icon={faStar}/>
-              <span>5(3)</span>
-            </div>
-            <div>2000+ đã bán</div>
-          </div>
+         
         </div>
       </div>
    </Link>
