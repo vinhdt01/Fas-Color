@@ -18,7 +18,7 @@ const Logo: React.FC<React.AnchorHTMLAttributes<{}>> = ({
 			{...props}
 		>
 			<img
-        src='./assets/images/LogoFas.png'
+        src='./assets/images/logo2.png'
 				alt={siteTitle || "ChawkBazar Logo"}
         // TODO: Make it dynamic
 				// height={30}
