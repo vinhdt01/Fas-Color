@@ -8,7 +8,7 @@ import { ESFlag } from "@components/icons/ESFlag";
 export const siteSettings = {
   name: "PNJ",
   description:
-    "Fastest E-commerce built with React, NextJS, TypeScript, React-Query and Tailwind CSS.",
+    "FasColor tự hào là thương hiệu thời trang dành cho giới trẻ, với sản phẩm chất lượng cùng với giá thành hợp lý , FasColor luôn tự tin sẽ là một lựa chọn hàng đầu khi nhắc đến thương hiệu thời trang Việt Nam",
   author: {
     name: "RedQ, Inc.",
     websiteUrl: "https://redq.io",
