@@ -6,7 +6,7 @@ interface Props {
 const HeaderMobile:React.FC<Props> = ({openSearch}) => {
     return (
         <div className="xl:hidden flex justify-between items-center px-1  h-[50px] overflow-hidden">
-			<Link href="/"><img className="w-[71px] h-[30.8px] cursor-pointer" src="/assets/images/logo2.png" alt="Logo"/></Link>
+			<Link href="/"><img className="w-[71px] h-[30.8px] cursor-pointer" src="/assets/images/logo2.png"xx	x	 alt="Logo"/></Link>
             <div onClick={openSearch} className=" relative mx-8 flex-1">
 			{/* <input className="w-[100%] h-[28px] flex-1  rounded-2xl pl-2 pr-7 outline-none border-[1px] border-slate-100 bg-[#ededed] placeholder:text-[13px]" type="text" placeholder="Tìm kiếm nhanh"/> */}
 				<button

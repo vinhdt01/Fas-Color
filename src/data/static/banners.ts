@@ -42,12 +42,12 @@ export const masonryBanner = [
     slug: "womens-collection",
     image: {
       mobile: {
-        url: "/assets/images/banner/314d71bd5a43801dd952.jpg",
+        url: "/assets/images/dam.png",
         width: 232,
         height: 232,
       },
       desktop: {
-        url: "/assets/images/banner/314d71bd5a43801dd952.jpg",
+        url: "/assets/images/dam.png",
         width: 425,
         height: 425,
       },
@@ -78,12 +78,12 @@ export const masonryBanner = [
     slug: "product-coupons",
     image: {
       mobile: {
-        url: "https://file.hstatic.net/1000351433/file/banner_chinh_op2_3cc94f6e60e5428da2af88be216269d0.png",
+        url: "https://ik.imagekit.io/ojqqct1ma/%C4%90%E1%BB%92_%C3%A1n/vn-11134201-23030-6ss5ppqjr5nv8d.jpeg?updatedAt=1681618873422&tr=w-1200%2Ch-628%2Cfo-auto",
         width: 232,
         height: 232,
       },
       desktop: {
-        url: "https://file.hstatic.net/1000351433/file/banner_chinh_op2_3cc94f6e60e5428da2af88be216269d0.png",
+        url: "https://ik.imagekit.io/ojqqct1ma/%C4%90%E1%BB%92_%C3%A1n/vn-11134201-23030-6ss5ppqjr5nv8d.jpeg?updatedAt=1681618873422&tr=w-1200%2Ch-628%2Cfo-auto",
         width: 425,
         height: 425,
       },
@@ -186,24 +186,7 @@ export const promotionBanner = [
     },
     type: "small",
   },
-  {
-    id: 2,
-    title: "Women's Collection",
-    slug: "womens-collection",
-    image: {
-      mobile: {
-        url: "/assets/images/banner2.png",
-        width: 450,
-        height: 180,
-      },
-      desktop: {
-        url: "/assets/images/banner2.png",
-        width: 1440,
-        height: 570,
-      },
-    },
-    type: "small",
-  },
+
   {
     id: 3,
     title: "Winter Collection",
@@ -221,25 +204,8 @@ export const promotionBanner = [
       },
     },
     type: "small",
-  },
-  {
-    id: 4,
-    title: "Winter Collection",
-    slug: "winter-collection",
-    image: {
-      mobile: {
-        url: "/assets/images/banner4.png",
-        width: 450,
-        height: 180,
-      },
-      desktop: {
-        url: "/assets/images/banner4.png",
-        width: 1440,
-        height: 570,
-      },
-    },
-    type: "small",
   }
+ 
  
 ];
 

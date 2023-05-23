@@ -91,8 +91,6 @@ const ProductOverlayCard: React.FC<ProductProps> = ({
             alt={"Product Image"}
             className="object-cover transition duration-500 ease-in-out transform group-hover:scale-110"
           />
-                  {/* <img  className="absolute left-2 bottom-1 w-7 h-7" src="https://cdn.pnj.io/images/image-update/2022/10/pnjfast/PNJfast-Giaotrong3h.svg" alt="pnjfast" /> */}
-                  <img  className="absolute right-2 top-1 w-7 h-7" src="https://cdn.pnj.io/images/image-update/tag-product/new-icon-3-w29.svg" alt="new"/>
         </div>
         <div
           className="flex flex-col items-center justify-center text-center px-4 pb-4 text-[14px]"
