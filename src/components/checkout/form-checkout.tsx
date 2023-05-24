@@ -121,10 +121,7 @@ const FormCheckout:React.FC = ({data}:any) => {
                 <p>Giao hàng tận nơi</p>
                 <i className="text-[11px]">(Miễn phí giao hàng toàn quốc)</i>
               </div>
-              <div onClick={() => setMethodDelivery('at-shop')}  className={cn("flex-1 mx-1 text-center h-[59px] py-[15px] rounded-tl-lg rounded-tr-lg  leading-none cursor-pointer" , {'bg-[#003468] text-[#fff]' : methodDelivery=='at-shop' , 'bg-[#cecece] ' : methodDelivery!='at-shop'})}>
-                <p>Nhận tại cữa hàng</p>
-              <i className="text-[11px]">Giữ hàng trước - Nhận hàng ngay</i>
-              </div>
+             
 
             </div>
             <div>

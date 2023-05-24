@@ -13,6 +13,7 @@ const PaymentSuccessfully = () => {
   useEffect(() => {
     axios.get(`${process.env.NEXT_PUBLIC_BASE_URL}/getorders/${query.orderID}`)
     .then(res => {
+      console.log(res , 'res')
       setData(res.data.data)
     })
   } , [query.orderID])
