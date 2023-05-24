@@ -77,10 +77,10 @@ const ProductOverlayCard: React.FC<ProductProps> = ({
    <Link href={"/products/" + item?._id}>
       <div
         // onClick={handlePopupView}
-        className={`${classes} cursor-pointer group flex flex-col bg-gray-200 rounded-md relative items-center justify-between overflow-hidden`}
+        className={` cursor-pointer group flex flex-col bg-gray-200 rounded-md relative items-center justify-between overflow-hidden`}
       >
         <div
-          className={`relative flex justify-center items-center p-4 h-full 3xl:min-h-[330px] ${indexes.includes(index) && variant === "fashion" ? "lg:col-span-2" : ""}`}
+          className={`relative flex justify-center items-center p-4 h-full ${indexes.includes(index) && variant === "fashion" ? "lg:col-span-2" : ""}`}
           title='sfsdfdssfds'
         >
           <Image
@@ -89,16 +89,17 @@ const ProductOverlayCard: React.FC<ProductProps> = ({
             height={215}
             loading={imgLoading}
             alt={"Product Image"}
-            className="object-cover transition duration-500 ease-in-out transform group-hover:scale-110"
+            className="object-cover transition duration-500 ease-in-out transform group-hover:scale-110 rounded-lg"
           />
         </div>
         <div
-          className="flex flex-col items-center justify-center text-center px-4 pb-4 text-[14px]"
+          className="flex flex-col items-center justify-center text-center px-4 pb-4 text-[14px] h-[80px]"
           title="hello">
           <div className="sm:h-auto h-[45px] overflow-hidden">{item?.name}</div>
           <div className="text-[#c48c46]">{price}</div>
          
         </div>
+        
       </div>
    </Link>
   );
