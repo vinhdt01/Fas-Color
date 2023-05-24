@@ -32,7 +32,7 @@ const ProductsFeatured: React.FC<ProductsProps> = ({
       <h1  className="text-[#003868] text-[20px] font-bold">{title}</h1>
       {/* {error && <Alert message={error.message} />} */}
 
-      <div className="grid grid-cols-4 grid-rows-auto gap-3 md:gap-5 xl:gap-7">
+      <div className="grid md:grid-cols-4 grid-cols-2 grid-rows-auto gap-3 md:gap-5 xl:gap-7">
     
         {
          data && data.map((item , index) => (
