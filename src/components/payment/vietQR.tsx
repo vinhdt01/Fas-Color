@@ -12,16 +12,16 @@ export default function VietQR({handleSetShow}:any) {
     let baseURL = process.env.NEXT_PUBLIC_BASE_URL;
 
  
-    axios.put(`${process.env.NEXT_PUBLIC_BASE_URL}/update-payment?orderid=${query.orderid}` , {
+    axios.put(`${process.env.NEXT_PUBLIC_BASE_URL}/update-payment/?orderid=${query.orderid}` , {
       paymentMethod:"viet-qr"
     })
     .then((res)=> {
       console.log(res.data , 'dfg')
       if(res?.data.success == true) { 
-        router.push('/paymentsuccessful/orderID' + res.data.result?.orderId)
+        router.push('/paymentsuccessful/?orderID=' + res.data.result?.orderId)
        }  
        else {
-        router.push('/paymentfailure/orderID' + res.data.result.orderId)
+        router.push('/paymentfailure/?orderID=' + res.data.result.orderId)
 
        } 
     })

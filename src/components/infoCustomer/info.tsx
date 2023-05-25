@@ -1,7 +1,7 @@
 import usePrice from "@lib/use-price";
 
 export default function Info({data}) {
-    console.log('data' ,data)
+    console.log('data table' ,data)
     const { price } = usePrice({
 		amount: Number(data?.base_amount),
 	});
