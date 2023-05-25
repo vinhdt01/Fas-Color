@@ -54,6 +54,7 @@ const ProductSingleDetails: React.FC = ({ data }: any) => {
       addItemToCart({
         id:data._id,
         price: Number(data.price),
+        name:data.name,
         stock: 20,
         size:1,
         image:data.main_photoURL

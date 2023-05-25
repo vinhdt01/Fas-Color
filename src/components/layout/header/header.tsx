@@ -83,7 +83,7 @@ const Header: React.FC<Props> = ({
 		            </div>
 		            <div className="flex  items-center">
 		                <img className="w-[19px] h-[14px]" src="https://cdn.pnj.io/images/image-update/layout/icon-stores-new.svg" alt="Cửa hàng"/>
-		                  <div className="mx-2">Lịch sử đơn hàng</div>
+		                  <a href="/tracking" className="mx-2">Lịch sử đơn hàng</a>
 		            </div>
 		            <div className="flex  items-center"  onClick={handleCartOpen}>
 		      
