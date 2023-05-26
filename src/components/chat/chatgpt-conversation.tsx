@@ -46,7 +46,7 @@ const ChatGPTConversation = () => {
 
         setChatLog((prev:any) => [...prev , {
             type:'bot',
-            message:  JSON.stringify(response.data.choices[0].message.content)
+            message:  JSON.stringify(response.data.choices[0].message.content).replace('\n\n', '<br>')
         } ])
         setLoading(false)
 
