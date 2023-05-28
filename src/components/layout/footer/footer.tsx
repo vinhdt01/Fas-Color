@@ -41,7 +41,7 @@ const Footer:React.FC = () => {
               <div className="sm:w-[357px] w-[100%]  xl:ml-[0px] px-2 pb-5 xl:mb-0">
                   <div className="text-[11.5px] leading-6">
                       <div className="text-[14px] text-[#282828] font-medium">© 2023 FasColor</div>
-                      <div>170E Phan Đăng Lưu, P.3, Q.Phú Nhuận, TP.Hồ Chí Minh</div>
+                      <div>Số 1 , Võ Văn Ngân , Phường Linh Chiều , TP Thủ Đức</div>
                       <div>
                        <span>ĐT: </span> <a className="text-blue-700"  href="tel:0702686901">070 2686901</a></div>
                   </div>
